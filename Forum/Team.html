@@ -1,0 +1,458 @@
+<html dir="ltr" lang="en-gb"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Beautiful style for phpBB - Team</title>
+
+  <link href="./assets/css/font-awesome.min.css?assets_version=12" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/stylesheet.css?assets_version=12" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/en/stylesheet.css?assets_version=12" rel="stylesheet">
+
+  <link href="./styles/Beautiful-Premium/theme/Beautiful.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-colors.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-light.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-dark.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-customisation.css" rel="stylesheet">
+</head>
+<body id="phpbb" class="notouch section-memberlist ltr hasjs">
+  <div id="wrap" class="wrap">
+    <a id="top" class="top-anchor" accesskey="t"></a>
+    <header>
+      <div id="page-header">
+        <div class="headerbar" role="banner">
+          <div class="inner">
+            <div id="site-description" class="site-description">
+              <a id="logo" class="logo_a" href="./index.html" title="Board index">
+                <img src="./styles/Beautiful-Premium/theme/images/site_logo.svg" class="logo">
+              </a>
+              <div class="site-description-hidden">
+                <h1>yourdomain.com</h1>
+                <p>A short text to describe your forum</p>
+              </div>
+              <p class="skiplink">
+                <a href="#start_here">Skip to content</a>
+              </p>
+
+              <!-- SEARCH FORM-->
+              <div id="search-box" class="search-box search-header" role="search">
+                <form action="./Search-found.html" method="get" id="search">
+                  <fieldset>
+                    <input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…">
+                    <button class="button button-search" type="submit" title="Search">
+                      <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+                    </button>
+                    <a href="./Search.html" class="button button-search-end" title="Advanced search">
+                      <i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+                    </a>
+                  </fieldset>
+                </form>
+              </div>
+
+              <script>
+
+                // Dark mode - cookies
+                (window.onload = function() {
+                  let onpageLoad = localStorage.getItem("theme") || "";
+                  let element = document.body;
+                  element.classList.add(onpageLoad);
+
+                })();
+
+                // Dark mode - toogle switch
+                function themeToggle() {
+                  let element = document.body;
+                  element.classList.toggle("dark-mode");
+
+                  let theme = localStorage.getItem("theme");
+                  if (theme && theme === "dark-mode") {
+                  localStorage.setItem("theme", "");
+                  } else {
+                  localStorage.setItem("theme", "dark-mode");
+                  }
+
+                }
+              </script>
+
+              <div class="button-switch" type="button" onclick="themeToggle()">
+                <div class="slider"></div>
+              </div>
+
+              <ul class="right-ul-nav">
+                <li id="username_logged_in" class="rightside" data-skip-responsive="true">
+                  <div class="header-profile dropdown-container">
+                    <a href="./UCP.html" class="header-avatar dropdown-trigger dropdown-toggle">
+                      <span style="color: #AA0000;" class="username-coloured">admin</span></a>
+                    <div class="dropdown">
+                      <div class="pointer">
+                        <div class="pointer-inner"></div>
+                      </div>
+                      <ul class="dropdown-contents" role="menu">
+                        <li>
+                          <a href="./UCP.html" title="User Control Panel" role="menuitem">
+                            <i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>User Control Panel</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="./Profile.html" title="Profile" role="menuitem">
+                            <i class="icon fa-user fa-fw" aria-hidden="true"></i><span>Profile</span>
+                          </a>
+                        </li>
+
+                        <li class="separator"></li>
+                        <li>
+                          <a href="#" title="Logout" accesskey="x" role="menuitem">
+                            <i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Logout</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="rightside" data-skip-responsive="true">
+                  <a href="./PM.html" role="menuitem">
+                    <i class="icon fa-inbox fa-fw" aria-hidden="true"></i><span>Private messages </span><strong class="badge hidden">0</strong>
+                  </a>
+                </li>
+                <li class="dropdown-container dropdown-right rightside" data-skip-responsive="true">
+                  <a href="#" id="notification_list_button" class="dropdown-trigger dropdown-toggle">
+                    <i class="icon fa-bell fa-fw" aria-hidden="true"></i><span>Notifications </span><strong class="badge hidden">0</strong>
+                  </a>
+                  <div id="notification_list" class="dropdown dropdown-extended notification_list">
+                    <div class="pointer">
+                      <div class="pointer-inner"></div>
+                    </div>
+                    <div class="dropdown-contents">
+                      <div class="header">
+                        Notifications
+                        <span class="header_settings">
+                          <a href="./ucp.php?i=ucp_notifications&amp;mode=notification_options">Settings</a>
+                        </span>
+                      </div>
+
+                      <ul>
+                        <li class="no_notifications">
+                          You have no notifications
+                        </li>
+                      </ul>
+
+                      <div class="footer">
+                        <a href="./ucp.php?i=ucp_notifications"><span>See All</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="navbar" role="navigation">
+            <div class="inner">
+              <ul id="nav-main" class="nav-main linklist" role="menubar">
+                <li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+                  <a href="#" class="dropdown-trigger dropdown-toggle">
+                    <i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+                  </a>
+                  <div class="dropdown">
+                    <div class="pointer">
+                      <div class="pointer-inner"></div>
+                    </div>
+                    <ul class="dropdown-contents" role="menu">
+                      <li class="separator"></li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Your posts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-red" aria-hidden="true"></i><span>New posts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-red" aria-hidden="true"></i><span>Unread posts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+                        </a>
+                      </li>
+                      <li class="separator"></li>
+                      <li>
+                        <a href="./Search.html" role="menuitem">
+                          <i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+                        </a>
+                      </li>
+
+                      <li class="separator"></li>
+                      <li>
+                        <a href="./Members.html" role="menuitem">
+                          <i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Team.html" role="menuitem">
+                          <i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+                        </a>
+                      </li>
+                      <li class="separator"></li>
+
+                      <li data-last-responsive="true">
+                        <a href="./FAQ.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+                          <i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+                        </a>
+                      </li>
+                      <li data-last-responsive="true">
+                        <a href="./#" title="Administration Control Panel" role="menuitem">
+                          <i class="icon fa-cogs fa-fw" aria-hidden="true"></i><span>ACP</span>
+                        </a>
+                      </li>
+                      <li data-last-responsive="true">
+                        <a href="#" title="Moderator Control Panel" role="menuitem">
+                          <i class="icon fa-gavel fa-fw" aria-hidden="true"></i><span>MCP</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+
+              <ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+                <li class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList" style="max-width: 240px;">
+                  <span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a itemprop="item" href="./index.html" accesskey="h" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1"></span>
+<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a itemprop="item" href="#" title="The team"><span itemprop="name">The team</span></a><meta itemprop="position" content="2"></span>
+                </li>
+
+                <li class="rightside responsive-search">
+                  <a href="./search.php" title="View the advanced search options" role="menuitem">
+                    <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <a id="start_here" class="anchor"></a>
+    <div id="page-body" class="page-body" role="main">
+      <h2 class="solo">The team</h2>
+
+      <form method="post" action="">
+        <div class="forumbg forumbg-table">
+          <div class="inner">
+            <table class="table1 show-header responsive" id="team">
+              <thead>
+                <tr>
+                  <th class="name" data-dfn="Rank, Username">
+                    <span class="rank-img">Rank&nbsp;</span><a href="#">Administrators</a>
+                  </th>
+                  <th class="info">Primary group</th>
+                  <th class="info">Moderator</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg1">
+                  <td><dfn style="display: none;">Rank, Username</dfn><dfn style="display: none;">Rank, Username</dfn><dfn style="display: none;">Rank, Username</dfn>
+                    <dfn style="display: none;">Rank, Username</dfn><span class="rank-img">Site Admin</span><a href="./Profile.html" style="color: #AA0000;" class="username-coloured">admin</a>
+                  </td>
+                  <td class="info"><dfn style="display: none;">Primary group</dfn><dfn style="display: none;">Primary group</dfn><dfn style="display: none;">Primary group</dfn>
+                    <dfn style="display: none;">Primary group</dfn>
+                    <a style="font-weight: bold; color: #AA0000" href="#">Administrators</a>
+                  </td>
+                  <td class="info"><dfn style="display: none;">Moderator</dfn><dfn style="display: none;">Moderator</dfn><dfn style="display: none;">Moderator</dfn>
+                    <dfn style="display: none;">Moderator</dfn>All forums
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="forumbg forumbg-table">
+          <div class="inner">
+            <table class="table1 show-header responsive" id="team">
+              <thead>
+                <tr>
+                  <th class="name" data-dfn="Rank, Username">
+                    <span class="rank-img">Rank&nbsp;</span><a href="#">Global moderators</a>
+                  </th>
+                  <th class="info">Primary group</th>
+                  <th class="info">Moderator</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg1 big-column">
+                  <td colspan="3">
+                    <strong>No members found for this search criterion.</strong>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </form>
+
+      <div class="action-bar actions-jump">
+        <div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+          <span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+            <span>Jump to</span>
+            <span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+          </span>
+          <div class="dropdown">
+            <div class="pointer"><div class="pointer-inner"></div></div>
+            <ul class="dropdown-contents">
+              <li>
+                <a href="./viewforum.php?f=1" class="jumpbox-cat-link">
+                  <span> Forum 1</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=2" class="jumpbox-sub-link"><span class="spacer"></span>
+                  <span>↳ &nbsp; Your first forum</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=4" class="jumpbox-sub-link"><span class="spacer"></span>
+                  <span>↳ &nbsp; Unread Forum</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=6" class="jumpbox-sub-link"><span class="spacer"></span>
+                  <span>↳ &nbsp; Normal Forum with Subforums</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=8" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span>
+                  <span>↳ &nbsp; Curabitur</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=9" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span>
+                  <span>↳ &nbsp; Nullam lectus justo, vulputate eget mollis
+                    sed,</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=15" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span>
+                  <span>↳ &nbsp; Nullam</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=16" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span>
+                  <span>↳ &nbsp; Nullam</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=17" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span>
+                  <span>↳ &nbsp; Nullam</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=18" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span>
+                  <span>↳ &nbsp; Nullam hsad</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=19" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span>
+                  <span>↳ &nbsp; Nullam</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=10" class="jumpbox-sub-link"><span class="spacer"></span>
+                  <span>↳ &nbsp; Normal Redirect Link</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=11" class="jumpbox-sub-link"><span class="spacer"></span>
+                  <span>↳ &nbsp; Password Forum</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=12" class="jumpbox-sub-link"><span class="spacer"></span>
+                  <span>↳ &nbsp; Normal Forum with a Forum Image</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=13" class="jumpbox-sub-link"><span class="spacer"></span>
+                  <span>↳ &nbsp; Normal Locked Forum</span></a>
+              </li>
+              <li>
+                <a href="./viewforum.php?f=14" class="jumpbox-forum-link">
+                  <span> Aliquam ante</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="page-footer" class="page-footer" role="contentinfo">
+        <div class="navbar" role="navigation">
+          <div class="inner">
+            <ul id="nav-footer" class="nav-footer linklist" role="menubar">
+              <li class="breadcrumbs wrapped" style="">
+                <span class="crumb wrapped wrapped-max wrapped-wide wrapped-medium wrapped-small wrapped-tiny"><a href="./index.php" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>
+              </li>
+
+              <li class="responsive-menu hidden rightside dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="responsive-menu hidden rightside dropdown-container" style=""><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="responsive-menu hidden rightside dropdown-container" style=""><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="rightside">
+                All times are <span title="Pacific/Midway">UTC-11:00</span>
+              </li>
+              <li class="rightside">
+                <a href="#" data-ajax="true" data-refresh="true" role="menuitem">
+                  <i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+                </a>
+              </li>
+              <li class="rightside" data-last-responsive="true">
+                <a href="#" title="View complete list of members" role="menuitem">
+                  <i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+                </a>
+              </li>
+              <li class="rightside" data-last-responsive="true">
+                <a href="#" role="menuitem">
+                  <i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+                </a>
+              </li>
+              <li class="rightside" data-last-responsive="true">
+                <a href="#" role="menuitem">
+                  <i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+          <div id="darken" class="darken">&nbsp;</div>
+        </div>
+
+        <div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+          <a href="#" class="alert_close">
+            <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+          </a>
+          <h3 class="alert_title">&nbsp;</h3>
+          <p class="alert_text"></p>
+        </div>
+        <div id="phpbb_confirm" class="phpbb_alert">
+          <a href="#" class="alert_close">
+            <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+          </a>
+          <div class="alert_text"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div>
+    <a id="bottom" class="anchor" accesskey="z"></a>
+  </div>
+
+  <script src="./assets/javascript/jquery-3.6.0.min.js?assets_version=12"></script>
+  <script src="./assets/javascript/core.js?assets_version=12"></script>
+
+  <script src="./styles/Beautiful-Premium/template/forum_fn.js?assets_version=12"></script>
+  <script src="./styles/Beautiful-Premium/template/ajax.js?assets_version=12"></script>
+
+<style type="text/css" id="stylebot-css-*">
+  ::selection {
+      background: rgb(209, 224, 191)  !important;
+      color: rgb(50, 90, 0)  !important;
+    }
+</style>
+
+</body></html>

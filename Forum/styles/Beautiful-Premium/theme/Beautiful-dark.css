@@ -1,0 +1,189 @@
+.dark-mode{
+    background-color: #2a2a2a;
+}
+.dark-mode .wrap, .dark-mode ul.forums, .dark-mode ul.topics, .dark-mode ul.forums, .dark-mode ul.topics, .dark-mode fieldset.submit-button,.dark-mode .panel-container .panel,
+#faqlinks {
+    background-color: #323232;
+}
+.dark-mode .inputbox, .dark-mode fieldset.quick-login input.inputbox {
+    background: #323232;
+    color: #cecece;
+}
+.dark-mode .inputbox.search,
+.dark-mode .dropdown .dropdown-contents, 
+.dark-mode .forabg, .dark-mode .forumbg, .dark-mode .quick-links a, .dark-mode #page-body .button-search, .dark-mode #page-body .button-search-end,
+.dark-mode .search-header .button-search, .dark-mode .search-header .button-search-end, .dark-mode .search-box .inputbox:hover, 
+.dark-mode .search-box .inputbox:focus {
+    background: #565656;
+}
+
+.dark-mode li.row, .dark-mode ul.topiclist dd, .dark-mode table.table1 tbody td, .dark-mode .panel-container .panel li.row, .dark-mode .inputbox {
+    border-color: #565656;
+}
+.dark-mode li.row:hover {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .quick-links a:hover {
+    background: #393939;
+
+}
+.dark-mode ul.topiclist li, .dark-mode li.header dt, .dark-mode li.header dd {
+    color: #939393;
+}
+.dark-mode .logo {
+content: url("./images/dark_site_logo.svg");
+}
+.dark-mode .dropdown li, .dark-mode .dropdown li li {
+    border-color: #949494;
+}
+
+.dark-mode h3 {
+    border-bottom-color: #565656
+}
+
+.dark-mode .row-item .forumtitle:hover, .dark-mode .row-item .topictitle:hover, .dark-mode .row-item .lastsubject:hover,
+.dark-mode  .row-item .subforum:hover, .dark-mode .row-item a.username:hover, .dark-mode .row-item a.username-coloured:hover {
+    text-decoration: underline;
+    color: white;
+}
+.dark-mode.section-viewtopic .bg1, .dark-mode.section-posting .bg1, .dark-mode.section-mcp .bg1, 
+.dark-mode .cp-main .pm, .dark-mode .post.bg1,  .dark-mode .panel.bg1, .dark-mode .forumbg-table .bg1, .dark-mode.section-ucp .bg1 {
+    background-color: #373737;
+}
+.dark-mode.section-viewtopic .bg2, .dark-mode.section-posting .bg2, .dark-mode .post.bg2, .dark-mode.section-mcp .bg2, 
+.dark-mode .panel.bg2, .dark-mode .forumbg-table .bg2, .dark-mode.section-ucp .bg2  {
+    background-color: #414141;
+}
+.dark-mode table .bg3 {
+    background: #1b1b1b;
+}
+.dark-mode .postbody {
+    color: #9b9b9b;
+}
+.dark-mode blockquote, .dark-mode blockquote blockquote, .dark-mode blockquote blockquote blockquote {
+    background-color: #333333;
+    border-color: #a6a6a6;
+}
+.dark-mode .codebox {
+    background-color: #333333;
+    border-color: #a6a6a6;
+}
+.dark-mode .codebox code {
+    color: #d7e0e9;
+}
+.dark-mode .postprofile strong {
+    color: #9b9b9b;
+}
+.dark-mode .postprofile dt.no-profile-rank, .dark-mode .postprofile dd.profile-rank, .dark-mode .postprofile .search-result-date {
+}
+.dark-mode .postprofile, .dark-mode .signature {
+    border-color: #696969;
+}
+.dark-mode .activetab a {
+    color: #ffffff!important;
+}
+.dark-mode .tabs .tab > a:hover {
+    background: #cdcdcd;
+    color: #585858;
+}
+.dark-mode .navigation .active-subsection a {
+    background: #d9d9d9;
+    color: #000000;
+}
+.dark-mode .navigation a:hover {
+    background: #4e4e4e;
+}
+.dark-mode .dropdown-contents a:hover {
+    background: #4e4e4e;
+}
+.dark-mode .responsive-tab .responsive-tab-link:before {
+    border-color: #ffffff;
+}
+.dark-mode select {
+    background: #474747;
+    color: #aaaaaa;
+}
+.dark-mode, .dark-mode dl.faq dt, .dark-mode .notification_list p.notification-time, 
+.dark-mode dl.details dt, .dark-mode table.table1 td, .dark-mode table.table1 thead th, .dark-mode .navigation a, 
+.dark-mode .panel-container .panel li.header dd, .dark-mode .panel-container .panel li.header dt, .dark-mode .tabs .tab > a, 
+.dark-mode label,.dark-mode dt label, .dark-mode .icon.icon-blue, .dark-mode a:hover .icon.icon-blue, .dark-mode .postprofile, .dark-mode .signature, 
+.dark-mode .content, .dark-mode .search-box .inputbox, .dark-mode .search-box .inputbox:hover, .dark-mode .search-box .inputbox:focus, 
+.dark-mode .panel, .dark-mode .footer-row, .dark-mode li.row strong, .dark-mode a.forumtitle,
+.dark-mode .quick-links a, .dark-mode .breadcrumbs .crumb a, .dark-mode ul.topiclist li, .dark-mode li.header dt, 
+.dark-mode li.header dd, .dark-mode .forumbg .header a, .dark-mode .forabg .header a, .dark-mode th a {
+    color: #c6c6c6;
+}
+
+.dark-mode table.table1 tbody tr:hover, .dark-mode table.table1 tbody tr.hover {
+    background-color: #222222;
+    color: #cacaca;
+}
+.dark-mode .dropdown-contents a, .dark-mode dl.mini dt, .dark-mode dl.details dd, .dark-mode table.table1 td:hover, .dark-mode .navigation a:hover, .dark-mode fieldset dl:hover dt label {
+    color: #ffffff;
+}
+@media (max-width: 907px){
+.dark-mode #navigation a, .dark-mode .rtl #navigation a {
+    background: #595959;
+}
+}
+.dark-mode ::placeholder {
+    color: #dfdfdf !important;
+   
+}
+.dark-mode .dropdown-contents li a {
+    color: #c7c7c7!important;
+}
+
+
+/* Forum icons & Topic icons */
+.dark-mode .global_read						{ background-image: url("./images/dark_announce_read.svg"); }
+.dark-mode .global_read_mine					{ background-image: url("./images/dark_announce_read_mine.svg"); }
+.dark-mode .global_read_locked					{ background-image: url("./images/dark_announce_read_locked.svg"); }
+.dark-mode .global_read_locked_mine				{ background-image: url("./images/dark_announce_read_locked_mine.svg"); }
+.dark-mode .global_unread						{ background-image: url("./images/dark_announce_unread.svg"); }
+.dark-mode .global_unread_mine					{ background-image: url("./images/dark_announce_unread_mine.svg"); }
+.dark-mode .global_unread_locked					{ background-image: url("./images/dark_announce_unread_locked.svg"); }
+.dark-mode .global_unread_locked_mine				{ background-image: url("./images/dark_announce_unread_locked_mine.svg"); }
+
+.dark-mode .announce_read						{ background-image: url("./images/dark_announce_read.svg"); }
+.dark-mode .announce_read_mine					{ background-image: url("./images/dark_announce_read_mine.svg"); }
+.dark-mode .announce_read_locked					{ background-image: url("./images/dark_announce_read_locked.svg"); }
+.dark-mode .announce_read_locked_mine				{ background-image: url("./images/dark_announce_read_locked_mine.svg"); }
+.dark-mode .announce_unread					{ background-image: url("./images/dark_announce_unread.svg"); }
+.dark-mode .announce_unread_mine					{ background-image: url("./images/dark_announce_unread_mine.svg"); }
+.dark-mode .announce_unread_locked					{ background-image: url("./images/dark_announce_unread_locked.svg"); }
+.dark-mode .announce_unread_locked_mine				{ background-image: url("./images/dark_announce_unread_locked_mine.svg"); }
+
+.dark-mode .forum_link						{ background-image: url("./images/dark_forum_link.svg"); }
+.dark-mode .forum_read						{ background-image: url("./images/dark_forum_read.svg"); }
+.dark-mode .forum_read_locked					{ background-image: url("./images/dark_forum_read_locked.svg"); }
+.dark-mode .forum_read_subforum					{ background-image: url("./images/dark_forum_read_subforum.svg"); }
+.dark-mode .forum_unread						{ background-image: url("./images/dark_forum_unread.svg"); }
+.dark-mode .forum_unread_locked					{ background-image: url("./images/dark_forum_unread_locked.svg"); }
+.dark-mode .forum_unread_subforum					{ background-image: url("./images/dark_forum_unread_subforum.svg"); }
+
+.dark-mode .sticky_read						{ background-image: url("./images/dark_sticky_read.svg"); }
+.dark-mode .sticky_read_mine					{ background-image: url("./images/dark_sticky_read_mine.svg"); }
+.dark-mode .sticky_read_locked					{ background-image: url("./images/dark_sticky_read_locked.svg"); }
+.dark-mode .sticky_read_locked_mine				{ background-image: url("./images/dark_sticky_read_locked_mine.svg"); }
+.dark-mode .sticky_unread						{ background-image: url("./images/dark_sticky_unread.svg"); }
+.dark-mode .sticky_unread_mine					{ background-image: url("./images/dark_sticky_unread_mine.svg"); }
+.dark-mode .sticky_unread_locked					{ background-image: url("./images/dark_sticky_unread_locked.svg"); }
+.dark-mode .sticky_unread_locked_mine				{ background-image: url("./images/dark_sticky_unread_locked_mine.svg"); }
+
+.dark-mode .topic_moved						{ background-image: url("./images/dark_topic_moved.svg"); }
+.dark-mode .pm_read,
+.dark-mode .topic_read						{ background-image: url("./images/dark_topic_read.svg"); }
+.dark-mode .topic_read_mine					{ background-image: url("./images/dark_topic_read_mine.svg"); }
+.dark-mode .topic_read_hot						{ background-image: url("./images/dark_topic_read_hot.svg"); }
+.dark-mode .topic_read_hot_mine					{ background-image: url("./images/dark_topic_read_hot_mine.svg"); }
+.dark-mode .topic_read_locked					{ background-image: url("./images/dark_topic_read_locked.svg"); }
+.dark-mode .topic_read_locked_mine					{ background-image: url("./images/dark_topic_read_locked_mine.svg"); }
+.dark-mode .pm_unread,
+.dark-mode .topic_unread						{ background-image: url("./images/dark_topic_unread.svg"); }
+.dark-mode .topic_unread_mine					{ background-image: url("./images/dark_topic_unread_mine.svg"); }
+.dark-mode .topic_unread_hot					{ background-image: url("./images/dark_topic_unread_hot.svg"); }
+.dark-mode .topic_unread_hot_mine					{ background-image: url("./images/dark_topic_unread_hot_mine.svg"); }
+.dark-mode .topic_unread_locked					{ background-image: url("./images/dark_topic_unread_locked.svg"); }
+.dark-mode .topic_unread_locked_mine				{ background-image: url("./images/dark_topic_unread_locked_mine.svg"); }
