@@ -1,0 +1,638 @@
+<html dir="ltr" lang="en-gb"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Beautiful style for phpBB - PM</title>
+
+  <link href="./assets/css/font-awesome.min.css?assets_version=12" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/stylesheet.css?assets_version=12" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/en/stylesheet.css?assets_version=12" rel="stylesheet">
+
+  <link href="./styles/Beautiful-Premium/theme/Beautiful.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-colors.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-light.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-dark.css" rel="stylesheet">
+  <link href="./styles/Beautiful-Premium/theme/Beautiful-customisation.css" rel="stylesheet">
+</head>
+<body id="phpbb" class="notouch section-ucp ltr hasjs">
+  <div id="wrap" class="wrap">
+    <a id="top" class="top-anchor" accesskey="t"></a>
+    <header>
+      <div id="page-header">
+        <div class="headerbar" role="banner">
+          <div class="inner">
+            <div id="site-description" class="site-description">
+              <a id="logo" class="logo_a" href="./index.html" title="Board index">
+                <img src="./styles/Beautiful-Premium/theme/images/site_logo.svg" class="logo">
+              </a>
+              <div class="site-description-hidden">
+                <h1>yourdomain.com</h1>
+                <p>A short text to describe your forum</p>
+              </div>
+              <p class="skiplink">
+                <a href="#start_here">Skip to content</a>
+              </p>
+
+              <!-- SEARCH FORM-->
+              <div id="search-box" class="search-box search-header" role="search">
+                <form action="./Search-found.html" method="get" id="search">
+                  <fieldset>
+                    <input name="keywords" id="keywords" type="search" maxlength="128" title="Search for keywords" class="inputbox search tiny" size="20" value="" placeholder="Search…">
+                    <button class="button button-search" type="submit" title="Search">
+                      <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+                    </button>
+                    <a href="./Search.html" class="button button-search-end" title="Advanced search">
+                      <i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">Advanced search</span>
+                    </a>
+                  </fieldset>
+                </form>
+              </div>
+
+              <script>
+
+                // Dark mode - cookies
+                (window.onload = function() {
+                  let onpageLoad = localStorage.getItem("theme") || "";
+                  let element = document.body;
+                  element.classList.add(onpageLoad);
+
+                })();
+
+                // Dark mode - toogle switch
+                function themeToggle() {
+                  let element = document.body;
+                  element.classList.toggle("dark-mode");
+
+                  let theme = localStorage.getItem("theme");
+                  if (theme && theme === "dark-mode") {
+                  localStorage.setItem("theme", "");
+                  } else {
+                  localStorage.setItem("theme", "dark-mode");
+                  }
+
+                }
+              </script>
+
+              <div class="button-switch" type="button" onclick="themeToggle()">
+                <div class="slider"></div>
+              </div>
+
+              <ul class="right-ul-nav">
+                <li id="username_logged_in" class="rightside" data-skip-responsive="true">
+                  <div class="header-profile dropdown-container">
+                    <a href="./UCP.html" class="header-avatar dropdown-trigger dropdown-toggle">
+                      <span style="color: #AA0000;" class="username-coloured">admin</span></a>
+                    <div class="dropdown">
+                      <div class="pointer">
+                        <div class="pointer-inner"></div>
+                      </div>
+                      <ul class="dropdown-contents" role="menu">
+                        <li>
+                          <a href="./UCP.html" title="User Control Panel" role="menuitem">
+                            <i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>User Control Panel</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="./Profile.html" title="Profile" role="menuitem">
+                            <i class="icon fa-user fa-fw" aria-hidden="true"></i><span>Profile</span>
+                          </a>
+                        </li>
+
+                        <li class="separator"></li>
+                        <li>
+                          <a href="#" title="Logout" accesskey="x" role="menuitem">
+                            <i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Logout</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="rightside" data-skip-responsive="true">
+                  <a href="./PM.html" role="menuitem">
+                    <i class="icon fa-inbox fa-fw" aria-hidden="true"></i><span>Private messages </span><strong class="badge hidden">0</strong>
+                  </a>
+                </li>
+                <li class="dropdown-container dropdown-right rightside" data-skip-responsive="true">
+                  <a href="#" id="notification_list_button" class="dropdown-trigger dropdown-toggle">
+                    <i class="icon fa-bell fa-fw" aria-hidden="true"></i><span>Notifications </span><strong class="badge hidden">0</strong>
+                  </a>
+                  <div id="notification_list" class="dropdown dropdown-extended notification_list">
+                    <div class="pointer">
+                      <div class="pointer-inner"></div>
+                    </div>
+                    <div class="dropdown-contents">
+                      <div class="header">
+                        Notifications
+                        <span class="header_settings">
+                          <a href="./ucp.php?i=ucp_notifications&amp;mode=notification_options">Settings</a>
+                        </span>
+                      </div>
+
+                      <ul>
+                        <li class="no_notifications">
+                          You have no notifications
+                        </li>
+                      </ul>
+
+                      <div class="footer">
+                        <a href="./ucp.php?i=ucp_notifications"><span>See All</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="navbar" role="navigation">
+            <div class="inner">
+              <ul id="nav-main" class="nav-main linklist" role="menubar">
+                <li id="quick-links" class="quick-links dropdown-container responsive-menu" data-skip-responsive="true">
+                  <a href="#" class="dropdown-trigger dropdown-toggle">
+                    <i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+                  </a>
+                  <div class="dropdown">
+                    <div class="pointer">
+                      <div class="pointer-inner"></div>
+                    </div>
+                    <ul class="dropdown-contents" role="menu">
+                      <li class="separator"></li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Your posts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-red" aria-hidden="true"></i><span>New posts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-red" aria-hidden="true"></i><span>Unread posts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-gray" aria-hidden="true"></i><span>Unanswered topics</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Topics.html" role="menuitem">
+                          <i class="icon fa-file-o fa-fw icon-blue" aria-hidden="true"></i><span>Active topics</span>
+                        </a>
+                      </li>
+                      <li class="separator"></li>
+                      <li>
+                        <a href="./Search.html" role="menuitem">
+                          <i class="icon fa-search fa-fw" aria-hidden="true"></i><span>Search</span>
+                        </a>
+                      </li>
+
+                      <li class="separator"></li>
+                      <li>
+                        <a href="./Members.html" role="menuitem">
+                          <i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="./Team.html" role="menuitem">
+                          <i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+                        </a>
+                      </li>
+                      <li class="separator"></li>
+
+                      <li data-last-responsive="true">
+                        <a href="./FAQ.html" rel="help" title="Frequently Asked Questions" role="menuitem">
+                          <i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+                        </a>
+                      </li>
+                      <li data-last-responsive="true">
+                        <a href="./#" title="Administration Control Panel" role="menuitem">
+                          <i class="icon fa-cogs fa-fw" aria-hidden="true"></i><span>ACP</span>
+                        </a>
+                      </li>
+                      <li data-last-responsive="true">
+                        <a href="#" title="Moderator Control Panel" role="menuitem">
+                          <i class="icon fa-gavel fa-fw" aria-hidden="true"></i><span>MCP</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+
+              <ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+                <li class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList" style="max-width: 604px;">
+                  <span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a itemprop="item" href="./index.html" accesskey="h" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw"></i><span itemprop="name">Board index</span></a><meta itemprop="position" content="1"></span>
+<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a itemprop="item" href="./UCP.html" title="User Control Panel"><span itemprop="name">User Control Panel</span></a><meta itemprop="position" content="2"></span>
+<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope=""><a itemprop="item" href="#" title="Private messages"><span itemprop="name">Private messages</span></a><meta itemprop="position" content="3"></span>
+                </li>
+
+                <li class="rightside responsive-search">
+                  <a href="./search.php" title="View the advanced search options" role="menuitem">
+                    <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">Search</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <a id="start_here" class="anchor"></a>
+    <div id="page-body" class="page-body" role="main">
+      <h2 class="ucp-title">User Control Panel</h2>
+
+      <div id="tabs" class="tabs">
+        <ul>
+          <li class="tab" style="display: none;">
+            <a href="./ucp.php?i=177">Overview</a>
+          </li>
+          <li class="tab" style="display: none;">
+            <a href="./ucp.php?i=178">Profile</a>
+          </li>
+          <li class="tab" style="display: none;">
+            <a href="./ucp.php?i=179">Board preferences</a>
+          </li>
+          <li class="tab activetab">
+            <a href="#">Private messages</a>
+          </li>
+          <li class="tab" style="display: none;">
+            <a href="./ucp.php?i=181">Usergroups</a>
+          </li>
+          
+          
+        <li class="tab responsive-tab dropdown-container" style=""><a href="javascript:void(0);" class="responsive-tab-link dropdown-toggle">&nbsp;</a><div class="dropdown tab-dropdown" style="display: none;"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"><li class="" style="">
+            <a href="./ucp.php?i=177">Overview</a>
+          </li><li class="" style="">
+            <a href="./ucp.php?i=178">Profile</a>
+          </li><li class="" style="">
+            <a href="./ucp.php?i=179">Board preferences</a>
+          </li><li class="" style="">
+            <a href="./ucp.php?i=181">Usergroups</a>
+          </li></ul></div></li></ul>
+      </div>
+
+      <div class="panel bg3">
+        <div class="inner">
+          <div style="width: 100%;">
+            <div id="cp-menu" class="cp-menu">
+              <div id="navigation" class="navigation" role="navigation">
+                <ul>
+                  <li>
+                    <a href="#"><span>Compose message</span></a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="#"><span>Manage PM drafts</span></a>
+                  </li>
+                </ul>
+
+                <hr>
+                <ul>
+                  <li id="active-subsection" class="active-subsection">
+                    <a href="#">Inbox</a>
+                  </li>
+                  <li>
+                    <a href="#"><span>a</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Outbox</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Sent messages</span></a>
+                  </li>
+                </ul>
+                <hr>
+
+                <ul>
+                  <li>
+                    <a href="#"><span>Rules, folders &amp; settings</span></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="cp-mini">
+                <div class="inner">
+                  <dl class="mini">
+                    <dt>Message colours</dt>
+                    <dd class="pm-legend pm_message_reported_colour">
+                      <span class="imageset pm_message_reported"></span>
+                      Reported message
+                    </dd>
+                    <dd class="pm-legend pm_marked_colour">
+                      <span class="imageset pm_marked"></span> Marked message
+                    </dd>
+                    <dd class="pm-legend pm_replied_colour">
+                      <span class="imageset pm_replied"></span> Replied to
+                      message
+                    </dd>
+                    <dd class="pm-legend pm_friend_colour">
+                      <span class="imageset pm_friend"></span> Message from
+                      friend
+                    </dd>
+                    <dd class="pm-legend pm_foe_colour">
+                      <span class="imageset pm_foe"></span> Message from foe
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div id="cp-main" class="cp-main ucp-main panel-container">
+              <h2>View messages: Inbox</h2>
+
+              <form id="viewfolder" method="post" action="./ucp.php?i=pm&amp;mode=view&amp;action=view_folder&amp;f=0">
+                <div class="panel">
+                  <div class="inner">
+                    <p>Folder is 10% full (5 out of 50 messages stored)</p>
+                    <div class="action-bar bar-top">
+                      <a href="#" accesskey="n" title="Compose message" class="button">
+                        <span>New PM</span>
+                        <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+                      </a>
+
+                      <div class="pagination">
+                        <a href="#" class="mark">Mark all messages read</a>
+                        • 5 messages • Page <strong>1</strong> of
+                        <strong>1</strong>
+                      </div>
+                    </div>
+
+                    <ul class="topiclist two-columns">
+                      <li class="header">
+                        <dl>
+                          <dt>
+                            <div class="list-inner with-mark">Message</div>
+                          </dt>
+                          <dd class="mark">Mark</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                    <ul class="topiclist cplist pmlist responsive-show-all two-columns">
+                      <li class="row bg2">
+                        <dl class="row-item pm_read">
+                          <dt>
+                            <div class="list-inner with-mark">
+                              <a href="#" class="topictitle">B</a>
+                              <br>
+                              by
+                              <a href="./Profile.html" style="color: #AA0000;" class="username-coloured">admin</a>
+                              » Sun Mar 12, 2023 1:47 am
+                              <div class="responsive-show" style="display:none;"></div>
+                            </div>
+                          </dt>
+                          <dd class="mark">
+                            <input type="checkbox" name="marked_msg_id[]" value="5">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="row bg1">
+                        <dl class="row-item pm_read">
+                          <dt style="background-image: url(images/icons/smile/info.gif); background-repeat: no-repeat;">
+                            <div class="list-inner with-mark">
+                              <a href="#" class="topictitle">A</a>
+                              <br>
+                              by
+                              <a href="./Profile.html" style="color: #AA0000;" class="username-coloured">admin</a>
+                              » Sun Mar 12, 2023 1:46 am
+                              <div class="responsive-show" style="display:none;"></div>
+                            </div>
+                          </dt>
+                          <dd class="mark">
+                            <input type="checkbox" name="marked_msg_id[]" value="4">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="row bg2">
+                        <dl class="row-item pm_read">
+                          <dt>
+                            <div class="list-inner with-mark">
+                              <a href="#" class="topictitle">Re: Welcome to phpBB3</a>
+                              <br>
+                              by
+                              <a href="./Profile.html" style="color: #AA0000;" class="username-coloured">admin</a>
+                              » Fri Mar 10, 2023 1:30 am
+                              <div class="responsive-show" style="display:none;"></div>
+                            </div>
+                          </dt>
+                          <dd class="mark">
+                            <input type="checkbox" name="marked_msg_id[]" value="3">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="row bg1 pm_replied_colour">
+                        <dl class="row-item pm_read">
+                          <dt>
+                            <div class="list-inner with-mark">
+                              <a href="#" class="topictitle">Re: Welcome to phpBB3</a>
+                              <br>
+                              by
+                              <a href="./Profile.html" style="color: #AA0000;" class="username-coloured">admin</a>
+                              » Fri Mar 10, 2023 1:20 am
+                              <div class="responsive-show" style="display:none;"></div>
+                            </div>
+                          </dt>
+                          <dd class="mark">
+                            <input type="checkbox" name="marked_msg_id[]" value="2">
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="row bg2 pm_replied_colour">
+                        <dl class="row-item pm_read">
+                          <dt>
+                            <div class="list-inner with-mark">
+                              <a href="#" class="topictitle">Re: Welcome to phpBB3</a>
+                              <br>
+                              by
+                              <a href="./Profile.html" style="color: #AA0000;" class="username-coloured">admin</a>
+                              » Tue Mar 07, 2023 10:58 pm
+                              <div class="responsive-show" style="display:none;"></div>
+                            </div>
+                          </dt>
+                          <dd class="mark">
+                            <input type="checkbox" name="marked_msg_id[]" value="1">
+                          </dd>
+                        </dl>
+                      </li>
+                    </ul>
+
+                    <fieldset class="display-actions">
+                      <div class="left-box">
+                        <label for="export_option">Export this view:
+                          <select name="export_option" id="export_option">
+                            <option value="CSV">Export as CSV</option>
+                            <option value="CSV_EXCEL">
+                              Export as CSV (Excel)
+                            </option>
+                            <option value="XML">Export as XML</option>
+                          </select></label>
+                        <input class="button2" type="submit" name="submit_export" value="Go"><br>
+                      </div>
+                      <select name="mark_option">
+                        <option value="mark_important">
+                          Mark/Unmark as important
+                        </option>
+                        <option value="delete_marked">Delete marked</option>
+                        <option class="sep" value="1">
+                          Move marked to a
+                        </option>
+                      </select>
+                      <input class="button2" type="submit" name="submit_mark" value="Go">
+                      <div>
+                        <a href="#" onclick="marklist('viewfolder', 'marked_msg', true); return false;">Mark all</a>
+                        •
+                        <a href="#" onclick="marklist('viewfolder', 'marked_msg', false); return false;">Unmark all</a>
+                      </div>
+                    </fieldset>
+
+                    <hr>
+
+                    <div class="action-bar bottom">
+                      <div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+                        <span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select dropdown-toggle">
+                          <i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+                          <span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+                        </span>
+                        <div class="dropdown hidden">
+                          <div class="pointer">
+                            <div class="pointer-inner"></div>
+                          </div>
+                          <div class="dropdown-contents">
+                            <fieldset class="display-options">
+                              <label>Display:
+                                <select name="st" id="st">
+                                  <option value="0" selected="selected">
+                                    All messages
+                                  </option>
+                                  <option value="1">1 day</option>
+                                  <option value="7">7 days</option>
+                                  <option value="14">2 weeks</option>
+                                  <option value="30">1 month</option>
+                                  <option value="90">3 months</option>
+                                  <option value="180">6 months</option>
+                                  <option value="365">1 year</option>
+                                </select></label>
+                              <label>Sort by:
+                                <select name="sk" id="sk">
+                                  <option value="a">Author</option>
+                                  <option value="t" selected="selected">
+                                    Post time
+                                  </option>
+                                  <option value="s">Subject</option>
+                                </select></label>
+                              <label>Direction:
+                                <select name="sd" id="sd">
+                                  <option value="a">Ascending</option>
+                                  <option value="d" selected="selected">
+                                    Descending
+                                  </option>
+                                </select></label>
+                              <hr class="dashed">
+                              <input type="submit" class="button2" name="sort" value="Go">
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+                      <input type="hidden" name="cur_folder_id" value="0">
+
+                      <div class="pagination">
+                        5 messages • Page <strong>1</strong> of
+                        <strong>1</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <input type="hidden" name="creation_time" value="1678971294">
+                  <input type="hidden" name="form_token" value="a3557f8f5275391463862387f66827546f4bc4ba">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="page-footer" class="page-footer" role="contentinfo">
+        <div class="navbar" role="navigation">
+          <div class="inner">
+            <ul id="nav-footer" class="nav-footer linklist" role="menubar">
+              <li class="breadcrumbs wrapped" style="">
+                <span class="crumb wrapped wrapped-max wrapped-wide wrapped-medium wrapped-small wrapped-tiny"><a href="./index.php" data-navbar-reference="index" title="Board index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>
+              </li>
+
+              <li class="responsive-menu hidden rightside dropdown-container"><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="responsive-menu hidden rightside dropdown-container" style=""><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="responsive-menu hidden rightside dropdown-container" style=""><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="responsive-menu hidden rightside dropdown-container" style=""><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="responsive-menu hidden rightside dropdown-container" style=""><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="responsive-menu hidden rightside dropdown-container" style=""><a href="javascript:void(0);" class="js-responsive-menu-link responsive-menu-link dropdown-toggle"><i class="icon fa-bars fa-fw" aria-hidden="true"></i></a><div class="dropdown"><div class="pointer"><div class="pointer-inner"></div></div><ul class="dropdown-contents"></ul></div></li><li class="rightside">
+                All times are <span title="Pacific/Midway">UTC-11:00</span>
+              </li>
+              <li class="rightside">
+                <a href="#" data-ajax="true" data-refresh="true" role="menuitem">
+                  <i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+                </a>
+              </li>
+              <li class="rightside" data-last-responsive="true">
+                <a href="#" title="View complete list of members" role="menuitem">
+                  <i class="icon fa-group fa-fw" aria-hidden="true"></i><span>Members</span>
+                </a>
+              </li>
+              <li class="rightside" data-last-responsive="true">
+                <a href="#" role="menuitem">
+                  <i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>The team</span>
+                </a>
+              </li>
+              <li class="rightside" data-last-responsive="true">
+                <a href="#" role="menuitem">
+                  <i class="icon fa-envelope fa-fw" aria-hidden="true"></i><span>Contact us</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+          <div id="darken" class="darken">&nbsp;</div>
+        </div>
+
+        <div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+          <a href="#" class="alert_close">
+            <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+          </a>
+          <h3 class="alert_title">&nbsp;</h3>
+          <p class="alert_text"></p>
+        </div>
+        <div id="phpbb_confirm" class="phpbb_alert">
+          <a href="#" class="alert_close">
+            <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+          </a>
+          <div class="alert_text"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div>
+    <a id="bottom" class="anchor" accesskey="z"></a>
+  </div>
+
+  <script src="./assets/javascript/jquery-3.6.0.min.js?assets_version=12"></script>
+  <script src="./assets/javascript/core.js?assets_version=12"></script>
+
+  <script src="./styles/Beautiful-Premium/template/forum_fn.js?assets_version=12"></script>
+  <script src="./styles/Beautiful-Premium/template/ajax.js?assets_version=12"></script>
+
+<style type="text/css" id="stylebot-css-*">
+  ::selection {
+    background: rgb(209, 224, 191)  !important;
+    color: rgb(50, 90, 0)  !important;
+  }
+</style>
+
+</body></html>
